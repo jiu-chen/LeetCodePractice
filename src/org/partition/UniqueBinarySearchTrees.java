@@ -33,18 +33,18 @@ public class UniqueBinarySearchTrees {
     }
 
     private static void print(List<TreeNode> res) {
-        for (TreeNode node: res) {
+        for (TreeNode node : res) {
             printTree(node);
             System.out.println();
         }
     }
 
     private static void printTree(TreeNode node) {
-        if(node==null){
-            System.out.print(" "+"null");
+        if (node == null) {
+            System.out.print(" " + "null");
             return;
         }
-        System.out.print(" "+node.val+" ");
+        System.out.print(" " + node.val + " ");
         printTree(node.left);
         printTree(node.right);
     }
@@ -77,32 +77,4 @@ public class UniqueBinarySearchTrees {
         return res;
     }
 
-//    public static List<TreeNode> generateTrees(int n) {
-//        if (n < 1) {
-//            return new LinkedList<>();
-//        }
-//        return generateTrees(1, n);
-//    }
-//
-//    private static List<TreeNode> generateTrees(int start, int end) {
-//        List<TreeNode> res = new LinkedList<>();
-//        if (start > end) {
-//            res.add(null);
-//            return res;
-//        }
-//
-//        for (int i = start; i <= end; i++) {
-//            List<TreeNode> leftTree = generateTrees(start, i - 1);
-//            List<TreeNode> rightTree = generateTrees(i + 1, end);
-//            for (TreeNode l : leftTree) {
-//                for (TreeNode r : rightTree) {
-//                    TreeNode node = new TreeNode(i);
-//                    node.left = l;
-//                    node.right = r;
-//                    res.add(node);
-//                }
-//            }
-//        }
-//        return res;
-//    }
 }
